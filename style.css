@@ -1,0 +1,241 @@
+/* ---- Preferences ---- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.load{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: turquoise;
+}
+.load-text{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul{
+  width: 100%;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: .5em;
+}
+nav li{
+  text-align: center;
+  float: left;
+  width: 25%;
+  height: 100%;
+  font-size: 2em;
+}
+#header{
+  height: 10vh;
+  width: 100%;
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  margin-left: 6px;
+  /*-webkit-text-stroke: .1px white;*/
+}
+#top{
+  height: 7vh;
+  font-size: 2em;
+  background-image: linear-gradient(rgb(79, 134, 196), rgb(12, 76, 150));
+  color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+}
+#top i{
+  margin-left: 6px;
+}
+#middle{
+  height: 73vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#intro{
+  width: 90%;
+  height: 80%;
+  border: black 1px solid;
+  margin-bottom: 4em;
+  box-shadow: 0 2px 4px;
+  text-align: center;
+  padding: 1em;
+}
+#videoBackground{
+  position: absolute;
+  border: 2px solid black;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+#icons{
+  position: absolute;
+  height: 10vh;
+  bottom: 0;
+  width: 100%;
+}
+/* ---- Navbar ---- */
+nav{
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  float: left;
+}
+main{
+  float: right;
+  width: 75%;
+}
+.main-grid{
+background-color: black;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+ --stagger-delay: 1000ms;
+}
+@keyframes intro {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+.item{
+  border: black solid 1px;
+  height: 0;
+  padding-bottom: 100%;
+  animation: intro 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+.item:nth-child(1){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_1.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(2){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(3){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(4){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_7.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(5){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_5.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(6){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_6.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(7){
+  animation-delay:  calc(1 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_4.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(8){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_8.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(9){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_9.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(10){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_10.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(11){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_11.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(12){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_12.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(13){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/model_1.jpg);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(14){
+  animation-delay:  calc(2 * var(--stagger-delay));
+  background-image: url(shoes/sneaker_13.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.item:nth-child(35){
+  background-color: red;
+  animation-delay:  calc(2 * var(--stagger-delay));
+  /*background-image: url(shoes/model_2.jpg);*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: green solid 2px;
+}
+@media screen and (min-width: 800px) {
+  .item-big{
+    grid-row: auto / span 2;
+    grid-column: auto / span 2;
+  }
+  .item-long{
+    grid-row: auto / span 2;
+  }
+}
+@media screen and (max-width: 800px) {
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+.item-long{
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  }
+nav{
+  display: none;
+}
+main{
+  width: 100%;
+}
+}
