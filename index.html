@@ -13,11 +13,14 @@
   </head>
   <body>
     <nav>
-      <video id="videoBackground" autoplay muted>
+      <video id="videoBackground" onload="removeLoading" autoplay muted>
         <source src="navvid.mp4" type="video/mp4">
       </video>
       <div id="top">
-        <i class="fas fa-users"></i>
+        <div id="search">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" placeholder="eg: red, cat, painting">
       </div>
       <div id="header">
         <h1>Avious Artwork</h1>
@@ -32,66 +35,250 @@
       <div id="icons">
         <ul>
           <li>
-            <i class="fas fa-capsules"></i>
+            <i class="fas fa-users"></i>
           </li>
           <li>
-            <i class="fas fa-bug"></i>
+            <i class="fab fa-instagram"></i>
           </li>
           <li>
-            <i class="fas fa-wrench"></i>
+            <i class="fab fa-twitter"></i>
           </li>
           <li>
-            <i class="fas fa-lungs-virus"></i>
+            <i class="far fa-eye"></i>
           </li>
         </ul>
       </div>
     </nav>
     <main>
       <div class="main-grid">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item , item-big"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item , item-big"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item , item-long"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item , item-big"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item , item-long"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item , item-big"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
+        <div class="item"><i class="far fa-comments"></i></div>
       </div>
     </main>
     <div class="load">

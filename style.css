@@ -9,7 +9,8 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: turquoise;
+  background-image: linear-gradient(rgb(79, 134, 196), rgb(12, 76, 150));
+  z-index: 9;
 }
 .load-text{
   height: 100%;
@@ -18,19 +19,20 @@
   align-items: center;
   justify-content: center;
 }
-nav ul{
+#icons ul{
+  display: flex;
   width: 100%;
-  list-style-type: none;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: .5em;
-}
-nav li{
-  text-align: center;
-  float: left;
-  width: 25%;
   height: 100%;
-  font-size: 2em;
+  list-style-type: none;
+}
+#icons li{
+  display: flex;
+  text-align: center;
+  height: 100%;
+  flex: 1;
+  font-size: 2.2em;
+  justify-content: center;
+  align-items: center;
 }
 #header{
   height: 10vh;
@@ -42,15 +44,23 @@ nav li{
 }
 #top{
   height: 7vh;
-  font-size: 2em;
-  background-image: linear-gradient(rgb(79, 134, 196), rgb(12, 76, 150));
+  width: 100%;
+  font-size: 1.5em;
+  background-image: linear-gradient(rgb(79, 134, 196,0.8), rgb(12, 76, 150,0.8));
   color: white;
   border: 2px solid black;
   display: flex;
-  align-items: center;
 }
-#top i{
-  margin-left: 6px;
+#search{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+#top input{
+  flex: 6;
+  overflow: hidden;/* removing this line caused bug-opacity */
 }
 #middle{
   height: 73vh;
@@ -80,6 +90,7 @@ nav li{
   height: 10vh;
   bottom: 0;
   width: 100%;
+  overflow: hidden;
 }
 /* ---- Navbar ---- */
 nav{
@@ -87,18 +98,20 @@ nav{
   height: 100vh;
   position: fixed;
   float: left;
+  z-index: 2;
+  transition: .5s;
 }
 main{
   float: right;
   width: 75%;
+  transition: .5s;
 }
 .main-grid{
 background-color: black;
 display: grid;
 grid-template-columns: repeat(5, 1fr);
- --stagger-delay: 1000ms;
 }
-@keyframes intro {
+/*@keyframes intro {
   from {
     opacity: 0;
     transform: scale(0.6);
@@ -107,116 +120,111 @@ grid-template-columns: repeat(5, 1fr);
     opacity: 1;
     transform: scale(1)
   }
-}
+}*/
 .item{
+  opacity: 0;
+  transform: scale(0.7);
   border: black solid 1px;
   height: 0;
   padding-bottom: 100%;
   animation: intro 700ms ease-out;
   animation-fill-mode: backwards;
+  transition: .5s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-.item:nth-child(1){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item i{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 1.1em;
+  height: 1.1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius:50px;
+  opacity: 0;
+  transition: 1s;
+  color: white;
+  font-size: 2em;
+}
+.item:nth-child(19n-18){
   background-image: url(shoes/sneaker_1.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
-.item:nth-child(2){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item:nth-child(19n-17){
   background-image: url(shoes/sneaker_2.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .1s;
 }
-.item:nth-child(3){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item:nth-child(19n-16){
   background-image: url(shoes/sneaker_3.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .2s;
 }
-.item:nth-child(4){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item:nth-child(19n-15){
   background-image: url(shoes/sneaker_7.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .3s;
 }
-.item:nth-child(5){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item:nth-child(19n-14){
   background-image: url(shoes/sneaker_5.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .1s;
 }
-.item:nth-child(6){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item:nth-child(19n-13){
   background-image: url(shoes/sneaker_6.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .2s;
 }
-.item:nth-child(7){
-  animation-delay:  calc(1 * var(--stagger-delay));
+.item:nth-child(19n-12){
   background-image: url(shoes/sneaker_4.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .3s;
 }
-.item:nth-child(8){
-  animation-delay:  calc(2 * var(--stagger-delay));
+.item:nth-child(19n-11){
   background-image: url(shoes/sneaker_8.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .3s;
 }
-.item:nth-child(9){
-  animation-delay:  calc(2 * var(--stagger-delay));
+.item:nth-child(19n-10){
   background-image: url(shoes/sneaker_9.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .4s;
 }
-.item:nth-child(10){
-  animation-delay:  calc(2 * var(--stagger-delay));
+.item:nth-child(19n-9){
   background-image: url(shoes/sneaker_10.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .5s;
 }
-.item:nth-child(11){
-  animation-delay:  calc(2 * var(--stagger-delay));
+.item:nth-child(19n-8){
   background-image: url(shoes/sneaker_11.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .6s;
 }
-.item:nth-child(12){
-  animation-delay:  calc(2 * var(--stagger-delay));
+.item:nth-child(19n-7){
   background-image: url(shoes/sneaker_12.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .5s;
 }
-.item:nth-child(13){
-  animation-delay:  calc(2 * var(--stagger-delay));
-  background-image: url(shoes/model_1.jpg);
-  background-size: 100% 200%;
-  background-repeat: no-repeat;
+.item:nth-child(19n-6){
+  background-image: url(shoes/sneaker_16.jpg);
+  transition-delay: .6s;
 }
-.item:nth-child(14){
-  animation-delay:  calc(2 * var(--stagger-delay));
+.item:nth-child(19n-5){
   background-image: url(shoes/sneaker_13.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  transition-delay: .7s;
 }
-.item:nth-child(35){
-  background-color: red;
-  animation-delay:  calc(2 * var(--stagger-delay));
-  /*background-image: url(shoes/model_2.jpg);*/
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  border: green solid 2px;
+.item:nth-child(19n-4){
+  background-image: url(shoes/sneaker_17.jpg);
 }
-@media screen and (min-width: 800px) {
+.item:nth-child(19n-3){
+  background-image: url(shoes/sneaker_18.jpeg);
+}
+.item:nth-child(19n-2){
+  background-image: url(shoes/sneaker_19.jpg);
+}
+.item:nth-child(19n-1){
+  background-image: url(shoes/sneaker_20.jpg);
+}
+.item:nth-child(19n){
+  background-image: url(shoes/sneaker_21.jpg);
+}
+@media screen and (min-width: 1200px) {
   .item-big{
     grid-row: auto / span 2;
     grid-column: auto / span 2;
   }
-  .item-long{
-    grid-row: auto / span 2;
-  }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 .main-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -226,7 +234,7 @@ grid-template-columns: repeat(5, 1fr);
     display: none;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 .main-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
