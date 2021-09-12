@@ -62,8 +62,6 @@ function buildGrid(info){
   };
 };
 buildGrid(mainGridArray);
-var footerHeight = ($("main").height());
-$("footer").css("height", footerHeight + 600);
 $("#top input").on("keyup", function(){
   var userInput = $(this).val();
   var info = filterGrid(userInput, mainGridArray);
@@ -71,8 +69,6 @@ $("#top input").on("keyup", function(){
   gridDisplay();
   for (let i = 0; i < 1000; i++) {
   gridHoverOn(i);
-  var footerHeight = ($("main").height());
-$("footer").css("height", footerHeight + 600);
 }
 });
 $(window).on("load",function(){
@@ -100,8 +96,10 @@ for (let i = 0; i < 1000; i++) {
 //scroll
 window.addEventListener("scroll", () => {
   var scroll = window.scrollY;
+  var scrollable = document.documentElement.scrollHeight - window.innerHeight;
   console.log(scroll);
-  if (scroll < 200){
+  console.log(scrollable);
+  if (scroll < 50){
     $("nav").css("width", "25%");
     $("main").css("width", "75%");
     $("#intro").css("opacity", "1");
@@ -115,7 +113,10 @@ window.addEventListener("scroll", () => {
     $("#icons ul").css("flex-direction","row");
     $("#middle").css("height", "73vh");
     $("#icons").css("height", "10vh");
-  }else if(scroll > 200){
+    screenAjust();
+  }else if(scroll > 50){
+    if(scroll == scrollable){
+    }else{
     $("nav").css("width", "5%");
     $("main").css("width", "95%");
     $("#intro").css("opacity", "0");
@@ -129,13 +130,13 @@ window.addEventListener("scroll", () => {
     $("#icons ul").css("flex-direction","column-reverse");
     $("#middle").css("height", "43vh");
     $("#icons").css("height", "40vh");
-    if ($("window").width() < 700) {
-      $("main").css("width", "100%");
+    screenAjust();
     };
   };
 });
 //
 $("#top").on("mouseover",function(){
+  console.log("up");
   $("nav").css("width", "25%");
   $("main").css("width", "75%");
   $("#intro").css("opacity", "1");
@@ -149,9 +150,11 @@ $("#top").on("mouseover",function(){
   $("#icons ul").css("flex-direction","row");
   $("#middle").css("height", "73vh");
   $("#icons").css("height", "10vh");
+  screenAjust();
 });
 $("nav").on("mouseleave",function(){
   if(window.scrollY > 200){
+    console.log("down");
     $("nav").css("width", "5%");
     $("main").css("width", "95%");
     $("#intro").css("opacity", "0");
@@ -165,8 +168,29 @@ $("nav").on("mouseleave",function(){
     $("#icons ul").css("flex-direction","column-reverse");
     $("#middle").css("height", "43vh");
     $("#icons").css("height", "40vh");
-    if ($("window").width() < 700) {
-      $("main").css("width", "100%");
-    };
+    screenAjust();
+  };
+});
+function screenAjust(){
+if ($(window).width() <= 684) {
+    $("main").css("width", "100%");
+  };
+};
+$(window).resize(function() {
+  screenAjust();
+  if ($(window).width() >= 684) {
+    $("nav").css("width", "25%");
+    $("main").css("width", "75%");
+    $("#intro").css("opacity", "1");
+    $("#intro").css("transition", "2.5s");
+    $("#top input").css("opacity","1");
+    $("#top input").css("transition","2.5s");
+    $("#top input").css("flex","6");
+    $("#search").css("flex","1");
+    $("#header").css("opacity","1");
+    $("#header").css("transition","4s");
+    $("#icons ul").css("flex-direction","row");
+    $("#middle").css("height", "73vh");
+    $("#icons").css("height", "10vh");
   };
 });
