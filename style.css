@@ -71,6 +71,9 @@ body{
   align-items: center;
   justify-content: center;
 }
+footer{
+  background-color: black;
+}
 #intro{
   width: 90%;
   height: 80%;
