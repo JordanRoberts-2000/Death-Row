@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+  background-color: black;
+}
 .load{
   position: fixed;
   top: 0;
@@ -148,75 +151,44 @@ grid-template-columns: repeat(5, 1fr);
   color: white;
   font-size: 2em;
 }
-.item:nth-child(19n-18){
-  background-image: url(shoes/sneaker_1.jpg);
-}
 .item:nth-child(19n-17){
-  background-image: url(shoes/sneaker_2.jpg);
   transition-delay: .1s;
 }
 .item:nth-child(19n-16){
-  background-image: url(shoes/sneaker_3.jpg);
   transition-delay: .2s;
 }
 .item:nth-child(19n-15){
-  background-image: url(shoes/sneaker_7.jpg);
   transition-delay: .3s;
 }
 .item:nth-child(19n-14){
-  background-image: url(shoes/sneaker_5.jpg);
   transition-delay: .1s;
 }
 .item:nth-child(19n-13){
-  background-image: url(shoes/sneaker_6.jpg);
   transition-delay: .2s;
 }
 .item:nth-child(19n-12){
-  background-image: url(shoes/sneaker_4.jpg);
   transition-delay: .3s;
 }
 .item:nth-child(19n-11){
-  background-image: url(shoes/sneaker_8.jpg);
   transition-delay: .3s;
 }
 .item:nth-child(19n-10){
-  background-image: url(shoes/sneaker_9.jpg);
   transition-delay: .4s;
 }
 .item:nth-child(19n-9){
-  background-image: url(shoes/sneaker_10.jpg);
   transition-delay: .5s;
 }
 .item:nth-child(19n-8){
-  background-image: url(shoes/sneaker_11.jpg);
   transition-delay: .6s;
 }
 .item:nth-child(19n-7){
-  background-image: url(shoes/sneaker_12.jpg);
   transition-delay: .5s;
 }
 .item:nth-child(19n-6){
-  background-image: url(shoes/sneaker_16.jpg);
   transition-delay: .6s;
 }
 .item:nth-child(19n-5){
-  background-image: url(shoes/sneaker_13.jpg);
   transition-delay: .7s;
-}
-.item:nth-child(19n-4){
-  background-image: url(shoes/sneaker_17.jpg);
-}
-.item:nth-child(19n-3){
-  background-image: url(shoes/sneaker_18.jpeg);
-}
-.item:nth-child(19n-2){
-  background-image: url(shoes/sneaker_19.jpg);
-}
-.item:nth-child(19n-1){
-  background-image: url(shoes/sneaker_20.jpg);
-}
-.item:nth-child(19n){
-  background-image: url(shoes/sneaker_21.jpg);
 }
 @media screen and (min-width: 1200px) {
   .item-big{

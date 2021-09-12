@@ -2,17 +2,79 @@
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
-
-/*$(window).on("load",function(){
+function gridDisplay(){
   $(".load").fadeOut("slow");
   $(".item").css("opacity", "1");
   $(".item").css("transform", "scale(1)");
-});*/
-document.getElementById("videoBackground").addEventListener('loadeddata', (e) => {
-  $(".load").fadeOut("slow");
-  $(".item").css("opacity", "1");
-  $(".item").css("transform", "scale(1)");
+};
+//display main grid
+var mainGridArray = [
+  {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
+  {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
+  {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
+  {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
+  {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
+  {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
+  {"background":"url(shoes/sneaker_13.jpg)","tag1":"red"}
+]
+function filterGrid(userInput, info){
+  var filterArray = [];
+  for (var i = 0; i < info.length; i++){
+    var userInput = userInput.toLowerCase();
+    var tag = info[i].tag1.toLowerCase();
+    if (tag.includes(userInput)){
+      filterArray.push(info[i]);
+    };
+  };
+  return filterArray;
+};
+function buildGrid(info){
+  $(".main-grid").html("");
+  for (var i = 0; i < info.length; i++){
+    var item = '<div style="background-image:'+info[i].background+'" class="item"><i class="far fa-comments"></i></div>'
+    $(".main-grid").append(item);
+    $(".item:nth-child(19n-15)").addClass("item-big");
+    $(".item:nth-child(19n-11)").addClass("item-big");
+  };
+};
+buildGrid(mainGridArray);
+$("#top input").on("keyup", function(){
+  var userInput = $(this).val();
+  var info = filterGrid(userInput, mainGridArray);
+  buildGrid(info);
+  gridDisplay();
+  for (let i = 0; i < 1000; i++) {
+  gridHoverOn(i);
+}
 });
+$(window).on("load",function(){
+  gridDisplay();
+});
+/*document.getElementById("videoBackground").addEventListener('loadeddata', (e) => {*/
 function gridHoverOn(a){
   $(".item:nth-child("+a+")").on("mouseover",function(){
     $(".item:nth-child("+a+")").css("transition-delay", "0");
